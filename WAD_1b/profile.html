@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <title>profile</title>
+  <!-- The code for a basic Bootstrap page (with a responsive fixed width container): -->
+  <!-- The .container class provides a responsive fixed width container -->
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Profile Page</h2>
+            <button onclick="LogOut()" style="float: right;">Log Out</button>
+            <hr>
+            
+            <h3>WELCOME</h3>
+            <h5>Name:
+                <script>
+                // Retrieve the current session "name" from local storage
+                document.write(localStorage.getItem("name"));
+                </script>  
+            </h5>
+
+            <h6>Your email is:
+                <script>
+                    document.write(localStorage.getItem("email"));
+                </script>  
+           </h6>
+        </div>
+    </div>
+</body>
+
+<script>
+    function LogOut(){
+        localStorage.removeItem("name");
+        localStorage.removeItem("email");
+
+        window.location.href="login.html";
+    }
+</script>
+</html>
