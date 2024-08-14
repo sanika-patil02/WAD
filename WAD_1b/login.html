@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+  <!-- The code for a basic Bootstrap page (with a responsive fixed width container): -->
+  <!-- The .container class provides a responsive fixed width container -->
+    <title>Login</title>
+</head>
+<body> 
+    <div class="container">
+        <div class="card">
+            <h2>Login Form</h2>
+            <form action="#">
+                <div>
+                    <label for="email">Email</label>  
+                    <br>
+                    <input type="email" name="myemail" id="email" placeholder="Enter Email">
+                </div>
+                <br>
+
+                <div>
+                    <label for="password">Password</label>
+                    <br>
+                    <input type="password" name="mypassword" id="password" placeholder="Enter Password">
+                </div>
+                <br>
+
+            <div>
+                <button type="button" class="btn btn-primary" onclick="SaveData()">Submit</button>
+                <!-- here,if we give button type=submit,then will not redirect to next page by this code,
+                    window.location.href="profile.html";-->
+                <button type="reset" class="btn btn-warning">Reset</button>
+            </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+<script>
+function SaveData(){
+    let email,password;
+    email=document.getElementById("email").value;
+    password=document.getElementById("password").value;
+
+    let user_record=new Array();
+    user_record=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+    if(user_record.some((v)=>{
+        return v.email==email && v.password==password;
+    })){
+        alert("Login Successful");
+
+        // JavaScript Array filter() Method is used to create a new array from a given array consisting of 
+        // only those elements from the given array that satisfy a condition set by the argument method. 
+        // This method accepts,callback: This parameter holds the function to be called for each element of the array.
+        // element: The parameter holds the value of the elements being processed currently.
+        let current_user=user_record.filter((v)=>{
+            return v.email==email && v.password==password;
+        })[0]
+        localStorage.setItem("name",current_user.name);  //Set the value of name & email in local storage for future use
+        localStorage.setItem("email",current_user.email); 
+
+        window.location.href="profile.html";
+        //Redirect to profile page
+    }
+    else{
+        alert("Login Failed");
+    }
+}
+</script>
+</html>
