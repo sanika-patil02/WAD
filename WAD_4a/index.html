@@ -1,0 +1,229 @@
+<!-- a. Create a simple Mobile Website using jQuery Mobile. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>JQuery Mobile</title>
+  </head>
+  <body>
+    <!-- Home Page -->
+    <div data-role="page" id="home">
+      <div data-role="header">
+        <h1>
+          Hope Foundation's <br />
+          International Institute of Information Technology(I²IT)
+        </h1>
+        <h5>
+          Approved by AICTE | Recognized by DTE, Govt. of Maharashtra <br />
+          Affiliated to the Savitribai Phule Pune University <br />
+          Accredited by NAAC | NBA Accredited - 2 UG Programmes
+        </h5>
+      </div>
+
+      <!-- data-grid=a row is divided into 2 columns -->
+      <!-- data-grid=b row is divided into 3 columns -->
+      <!-- data-grid=c row is divided into 4 columns -->
+      <div data-role="navbar" data-grid="c">
+        <ul>
+          <li><a href="#home" class="ui-btn-active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#dept">Department</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div data-role="content">
+        <h3 style="text-align: center">
+          Welcome To International Institute Of Information Technology (I²IT)
+        </h3>
+        <p style="text-align: justify">
+          The International Institute of Information Technology (I²IT), Pune
+          [pronounced as I Square IT] was established by Late Shri. P. P.
+          Chhabria, Founder Chairman of Finolex Group of Companies, a well-known
+          philanthropist and former President of Mahratta Chamber of Commerce,
+          Industries and Agriculture (MCCIA). As a world class academy to impart
+          high-end education in Engineering and Technology the Institute has
+          strived to meet the growing needs of the industry. Established on 10
+          acres of land, this institute equips students to accept challenges in
+          the areas of Information Technology, Engineering and other niche areas
+          of expertise.
+        </p>
+
+        <p style="text-align: justify">
+          I²IT has always propagated ‘Innovation and Leadership’ as their mantra
+          to bring ground-breaking ideas and provide a rock solid foundation for
+          learning. With the vision and mission of providing quality education,
+          the Institute is constructed by world renowned architects with its
+          uniquely designed dome as its temple of learning.
+        </p>
+      </div>
+
+      <div data-role="footer">
+        <h3>Quick Access</h3>
+        <center>
+          <a href="#home">Home</a><br />
+          <a href="#about">About</a><br />
+          <a href="#dept">Department</a><br />
+          <a href="#contact">Contact</a><br />
+          <h6>All Rights Are Reserve With I2IT @2023-24</h6>
+        </center>
+      </div>
+    </div>
+
+    <!-- About Page -->
+    <div data-role="page" id="about">
+      <div data-role="header">
+        <h1>
+          Hope Foundation's <br />
+          International Institute of Information Technology(I²IT)
+        </h1>
+        <h5>
+          Approved by AICTE | Recognized by DTE, Govt. of Maharashtra <br />
+          Affiliated to the Savitribai Phule Pune University <br />
+          Accredited by NAAC | NBA Accredited - 2 UG Programmes
+        </h5>
+      </div>
+
+      <div data-role="navbar" data-grid="c">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about" class="ui-btn-active">About</a></li>
+          <li><a href="#dept">Department</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div data-role="content">
+        <center>
+          <div class="row">
+            <img src="img1.png" alt="img1" height="250px" width="40%" />
+            <img src="img2.png" alt="img2" height="250px" width="40%" />
+          </div>
+          <div class="row">
+            <img src="img3.png" alt="img3" height="250px" width="40%" />
+            <img src="img4.png" alt="img4" height="250px" width="40%" />
+          </div>
+        </center>
+      </div>
+
+      <div data-role="footer">
+        <h3>Quick Access</h3>
+        <center>
+          <a href="#home">Home</a><br />
+          <a href="#about">About</a><br />
+          <a href="#dept">Department</a><br />
+          <a href="#contact">Contact</a><br />
+          <h6>All Rights Are Reserve With I2IT @2023-24</h6>
+        </center>
+      </div>
+    </div>
+
+    <!-- Department Page -->
+    <div data-role="page" id="dept">
+      <div data-role="header">
+        <h1>
+          Hope Foundation's <br />
+          International Institute of Information Technology(I²IT)
+        </h1>
+        <h5>
+          Approved by AICTE | Recognized by DTE, Govt. of Maharashtra <br />
+          Affiliated to the Savitribai Phule Pune University <br />
+          Accredited by NAAC | NBA Accredited - 2 UG Programmes
+        </h5>
+      </div>
+
+      <div data-role="navbar" data-grid="c">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#dept" class="ui-btn-active">Department</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div data-role="content">
+        <ul data-role="listview">
+          <!-- <li>Computer Engineering (COMP)</li> -->
+          <li><a href="#">Computer Engineering (COMP)</a></li>
+          <li><a href="#">Information Technology (IT)</a></li>
+          <li><a href="#">Electronics & Telecommunication (ENTC)</a></li>
+        </ul>
+      </div>
+
+      <div data-role="footer">
+        <h3>Quick Access</h3>
+        <center>
+          <a href="#home">Home</a><br />
+          <a href="#about">About</a><br />
+          <a href="#dept">Department</a><br />
+          <a href="#contact">Contact</a><br />
+          <h6>All Rights Are Reserve With I2IT @2023-24</h6>
+        </center>
+      </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div data-role="page" id="contact">
+      <div data-role="header">
+        <h1>
+          Hope Foundation's <br />
+          International Institute of Information Technology(I²IT)
+        </h1>
+        <h5>
+          Approved by AICTE | Recognized by DTE, Govt. of Maharashtra <br />
+          Affiliated to the Savitribai Phule Pune University <br />
+          Accredited by NAAC | NBA Accredited - 2 UG Programmes
+        </h5>
+      </div>
+
+      <div data-role="navbar" data-grid="c">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#dept">Department</a></li>
+          <li><a href="#contact" class="ui-btn-active">Contact</a></li>
+        </ul>
+      </div>
+
+      <div data-role="content">
+        <label for="myname">Name</label>
+        <input type="text" name="myname" id="myname" value="" />
+
+        <label for="myemail">Email</label>
+        <input type="email" name="myemail" id="myemail" value="" />
+
+        <label for="mymob">Mobile No.</label>
+        <input type="text" name="mymob" id="mymob" value="" />
+        <!-- <input type="tel" name="mymob" id="mymob" value=""> -->
+
+        <label for="myaddress">Address</label>
+        <input type="text" name="myaddress" id="myaddress" value="" />
+
+        <label for="mycomment">Comment</label>
+        <!-- <textarea name="mycomment" id="mycomment" cols="30" rows="10"></textarea> -->
+        <input type="text" name="mycomment" id="mycomment" value="" />
+
+        <button class="ui-btn-active">Submit</button>
+      </div>
+
+      <div data-role="footer">
+        <h3>Quick Access</h3>
+        <center>
+          <a href="#home">Home</a><br />
+          <a href="#about">About</a><br />
+          <a href="#dept">Department</a><br />
+          <a href="#contact">Contact</a><br />
+          <h6>All Rights Are Reserve With I2IT @2023-24</h6>
+        </center>
+      </div>
+    </div>
+  </body>
+</html>
